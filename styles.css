@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,24 +6,29 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: lightgray;
+    font-family: 'Raleway', sans-serif;
+    background-color: lightblue;
     color: black;
     font-size: 16px;
 }
 
 /* Navbar */
 .navbar {
-    background: blue;
+    background: black;
     color: white;
-    padding: 15px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px gray;
 }
 
 .navbar .logo {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -35,135 +41,150 @@ body {
 .navbar .nav-links a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
-    padding: 8px 12px;
-    background: navy;
-    border-radius: 5px;
+    font-size: 14px;
 }
 
 .navbar .nav-links a:hover {
-    background: darkblue;
+    text-decoration: underline;
 }
 
 /* Hero Section */
 .hero-section {
+    background-color: lightblue;
     text-align: center;
-    padding: 50px 20px;
-    background: lightblue;
-    color: white;
+    padding: 100px 20px; /* Extra space for navbar */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.hero-section h1 {
-    font-size: 30px;
+.hero-content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 16px;
     margin-bottom: 20px;
 }
 
-.hero-section p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.hero-section .btn-primary {
-    background: white;
-    color: blue;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.hero-section .btn-primary:hover {
-    background: darkblue;
-    color: white;
-}
-
-/* Sections */
-section {
-    padding: 30px 20px;
-    text-align: center;
-}
-
-section h2 {
-    margin-bottom: 15px;
-    font-size: 24px;
-    color: blue;
-}
-
-section p {
-    font-size: 16px;
+.btn-primary {
+    display: inline-block;
+    background-color: yellow;
     color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+/* About Section */
+.about-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.about-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 16px;
 }
 
 /* Features Section */
 .features-section {
-    background: white;
+    padding: 50px 20px;
+    background-color: lightgray;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .features-grid {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .feature-box {
-    background: lightgray;
+    background-color: white;
+    border-radius: 5px;
     padding: 20px;
-    border: 1px solid gray;
-    border-radius: 8px;
+    box-shadow: 0 2px 5px gray;
     width: 250px;
-    text-align: center;
 }
 
 .feature-box h3 {
-    margin-bottom: 15px;
-    color: blue;
-    font-size: 20px;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .feature-box p {
-    color: black;
     font-size: 14px;
 }
 
-/* Contact Form */
+/* Contact Section */
 .contact-section {
-    background: whitesmoke;
+    padding: 50px 20px;
+    background-color: white;
+    text-align: center;
 }
 
-.contact-section form {
-    max-width: 400px;
-    margin: 0 auto;
+.contact-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
+    align-items: center;
 }
 
-.contact-section input, .contact-section textarea, .contact-section button {
-    width: 100%;
+form input,
+form textarea {
+    width: 80%;
+    max-width: 400px;
     padding: 10px;
+    font-size: 14px;
     border: 1px solid gray;
     border-radius: 5px;
-    font-size: 16px;
 }
 
-.contact-section button {
-    background: blue;
-    color: white;
-    font-weight: bold;
+form button {
+    padding: 10px 20px;
+    background-color: yellow;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
     cursor: pointer;
 }
 
-.contact-section button:hover {
-    background: darkblue;
+form button:hover {
+    background-color: orange;
 }
 
 /* Footer */
 .footer {
-    text-align: center;
-    padding: 15px;
-    background: blue;
+    background: black;
     color: white;
-    font-size: 14px;
+    text-align: center;
+    padding: 10px 20px;
 }
